@@ -1,0 +1,45 @@
+name: Build GH-Pages
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build-gh-pages:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - uses: actions/checkout@v3
+        with:
+          repository: KrauseFx/markdown-to-html-github-style
+          path: markdown-to-html-github-style
+
+      - name: Install dependencies
+        working-directory: markdown-to-html-github-style
+        run: |
+          npm install
+
+      - name: Generate manual
+        run: |
+          ls -1
+          ls -1 markdown-to-html-github-style
+          node markdown-to-html-github-style/convert.js "INSPIRE Dataset Metadata Template"
+
+      - name: Copy manual to gh-pages folder
+        run: |
+          mkdir -p /tmp/gh-pages
+          mv README.html /tmp/gh-pages/index.html
+
+      - name: Publish to GitHub pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: /tmp/gh-pages
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
