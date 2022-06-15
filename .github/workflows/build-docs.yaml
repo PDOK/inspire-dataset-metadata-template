@@ -16,8 +16,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: actions/checkout@v3
-        repository: KrauseFx/markdown-to-html-github-style
-        path: $GITHUB_WORKSPACE/markdown-to-html-github-style
+        with:
+          repository: KrauseFx/markdown-to-html-github-style
+          path: $GITHUB_WORKSPACE/markdown-to-html-github-style
 
       - name: Install dependencies
         working-directory: $GITHUB_WORKSPACE/markdown-to-html-github-style
