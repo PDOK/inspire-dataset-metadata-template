@@ -26,7 +26,6 @@ jobs:
           npm install
 
       - name: Generate manual
-        working-directory: $GITHUB_WORKSPACE
         run: |
           ls -1 $GITHUB_WORKSPACE/markdown-to-html-github-style
           ls -1 $GITHUB_WORKSPACE
