@@ -27,8 +27,8 @@ jobs:
 
       - name: Generate manual
         run: |
-          ls -1 $GITHUB_WORKSPACE/markdown-to-html-github-style
           ls -1 $GITHUB_WORKSPACE
+          ls -1 $GITHUB_WORKSPACE/markdown-to-html-github-style
           node $GITHUB_WORKSPACE/markdown-to-html-github-style/convert.js "INSPIRE Dataset Metadata Template"
 
       - name: Install dependencies
