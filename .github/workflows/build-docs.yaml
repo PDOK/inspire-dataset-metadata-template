@@ -21,15 +21,15 @@ jobs:
           path: markdown-to-html-github-style
 
       - name: Install dependencies
-        working-directory: $GITHUB_WORKSPACE/markdown-to-html-github-style
+        working-directory: markdown-to-html-github-style
         run: |
           npm install
 
       - name: Generate manual
         run: |
-          ls -1 $GITHUB_WORKSPACE
-          ls -1 $GITHUB_WORKSPACE/markdown-to-html-github-style
-          node $GITHUB_WORKSPACE/markdown-to-html-github-style/convert.js "INSPIRE Dataset Metadata Template"
+          ls -1
+          ls -1 markdown-to-html-github-style
+          node markdown-to-html-github-style/convert.js "INSPIRE Dataset Metadata Template"
 
       - name: Install dependencies
         working-directory: $GITHUB_WORKSPACE/markdown-to-html-github-style
