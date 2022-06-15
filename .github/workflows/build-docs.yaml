@@ -31,10 +31,9 @@ jobs:
           ls -1 markdown-to-html-github-style
           node markdown-to-html-github-style/convert.js "INSPIRE Dataset Metadata Template"
 
-      - name: Install dependencies
-        working-directory: $GITHUB_WORKSPACE/markdown-to-html-github-style
+      - name: Copy manual to gh-pages folder
         run: |
-          mv README.html pages/index.html
+          mv README.html gh-pages/index.html
 
       - name: Publish to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
