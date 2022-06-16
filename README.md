@@ -4,18 +4,18 @@ Template voor het eenvoudig aanmaken van een geldig INSPIRE dataset metadata rec
 
 [![](https://img.shields.io/badge/author-@arbakker-blue.svg?style=flat)](https://github.com/arbakker)
 
-[![](https://img.shields.io/badge/gh--pages-readme-green?style=flat)](https://arbakker.github.io/inspire-dataset-metadata-template/)
+[![](https://img.shields.io/badge/gh--pages-readme-green?style=flat)](https://pdok.github.io/inspire-dataset-metadata-template/)
 
 Dit repository bevat:
 
-- een [template](https://raw.githubusercontent.com/arbakker/inspire-dataset-metadata-template/master/inspire-dataset-metadata-template.xml) voor het eenvoudig aanmaken van een geldig INSPIRE dataset metadata record in [nationaalgeoregister.nl](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home) (NGR)
-- een [handleiding](https://arbakker.github.io/inspire-dataset-metadata-template/#handleiding) voor het invullen van dit template in de metadata editor van het [NGR](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home)
+- een [template](https://raw.githubusercontent.com/pdok/inspire-dataset-metadata-template/master/inspire-dataset-metadata-template.xml) voor het eenvoudig aanmaken van een geldig INSPIRE dataset metadata record in [nationaalgeoregister.nl](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home) (NGR)
+- een [handleiding](https://pdok.github.io/inspire-dataset-metadata-template/#handleiding) voor het invullen van dit template in de metadata editor van het [NGR](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home)
 
 Dit template is aangemaakt aan de hand van het [Nederlands metadata profiel op ISO 19115 voor geografie versie 2.1.0](https://docs.geostandaarden.nl/md/mdprofiel-iso19115/), verder in het document benoemd als _spec_. 
 
 ## Handleiding
 
-Deze handleiding beschrijft hoe een valide INSPIRE dataset metadata record aan te maken op basis van het door PDOK aangemaakte [*Template Nederlands metadata profiel op ISO 19115 voor geografie 2.1.0 - INSPIRE*](https://ngr.acceptatie.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/C2DFBDBC-5092-11E0-BA8E-B62DE0D72085).
+Deze handleiding beschrijft hoe een valide INSPIRE dataset metadata record aan te maken op basis van het door PDOK aangemaakte [*Template Nederlands metadata profiel op ISO 19115 voor geografie 2.1.0 - INSPIRE*](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/C2DFBDBC-5092-11E0-BA8E-B62DE0D72085).
 
 ### 1. Aanmaken nieuw metadata record op basis van template
 
@@ -206,7 +206,7 @@ Nadat alle velden zijn ingevuld
 5. Selecteerd bij _Select the type of metadata record(s) to be tested_ de waarde `Data sets and data set series`
 6. Vul de antispam filter in
 7. Geef een referentie naar het zojuist aangemaakt metadata record op:
-  - een url naar het XML document van de metadata, dus bijvoorbeeld: `https://ngr.acceptatie.nationaalgeoregister.nl/geonetwork/srv/dut/csw?SERVICE=CSW&version=2.0.2&REQUEST=GetRecordById&elementSetName=full&OutputSchema=http://www.isotc211.org/2005/gmd&ID=60a2a7c2-d5b3-4ad5-b562-c448695357fb`
+  - een url naar het XML document van de metadata, dus bijvoorbeeld: `https://nationaalgeoregister.nl/geonetwork/srv/dut/csw?SERVICE=CSW&version=2.0.2&REQUEST=GetRecordById&elementSetName=full&OutputSchema=http://www.isotc211.org/2005/gmd&ID=60a2a7c2-d5b3-4ad5-b562-c448695357fb`
   - download het XML metadata document vanuit het NGR en upload het bestand in het formulier (bijvoorbeeld in het geval het metadata record nog niet gepubliceerd is)
 8. Bij een geslaagde validatie wordt het volgende scherm getoond (`PASSED_MANUAL` geeft aan dat de validatie geslaagd is, maar dat een aantal zaken nog handmatig gecontroleerd moeten worden):
 
