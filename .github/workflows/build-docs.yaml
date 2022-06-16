@@ -35,7 +35,6 @@ jobs:
         run: |
           mkdir -p /tmp/gh-pages
           mv README.html /tmp/gh-pages/index.html
-
       - name: Publish to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
         with:

@@ -1,5 +1,7 @@
 # INSPIRE DATASET METADATA TEMPLATE
 
+Template voor het eenvoudig aanmaken van een geldig INSPIRE dataset metadata record in [nationaalgeoregister.nl](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home).
+
 [![](https://img.shields.io/badge/author-@arbakker-blue.svg?style=flat)](https://github.com/arbakker)
 
 [![](https://img.shields.io/badge/gh--pages-readme-green?style=flat)](https://arbakker.github.io/inspire-dataset-metadata-template/)
@@ -224,4 +226,3 @@ a strong em{
     color: #0366d6
 }
 </style>
-
