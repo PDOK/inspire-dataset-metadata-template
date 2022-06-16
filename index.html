@@ -8,9 +8,195 @@
         <div id='content'>
     <h1 id="inspire-dataset-metadata-template">INSPIRE DATASET METADATA TEMPLATE</h1>
 <p>Template voor het eenvoudig aanmaken van een geldig INSPIRE dataset metadata record in <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home">nationaalgeoregister.nl</a>.</p>
+<p><a href="https://github.com/arbakker"><img src="https://img.shields.io/badge/author-@arbakker-blue.svg?style=flat" alt="" /></a></p>
+<p><a href="https://arbakker.github.io/inspire-dataset-metadata-template/"><img src="https://img.shields.io/badge/gh--pages-readme-green?style=flat" alt="" /></a></p>
+<p>Dit repository bevat:</p>
+<ul>
+<li>een <a href="https://raw.githubusercontent.com/arbakker/inspire-dataset-metadata-template/master/inspire-dataset-metadata-template.xml">template</a> voor het eenvoudig aanmaken van een geldig INSPIRE dataset metadata record in <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home">nationaalgeoregister.nl</a> (NGR)</li>
+<li>een <a href="https://arbakker.github.io/inspire-dataset-metadata-template/#handleiding">handleiding</a> voor het invullen van dit template in de metadata editor van het <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home">NGR</a></li>
+</ul>
+<p>Dit template is aangemaakt aan de hand van het <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/">Nederlands metadata profiel op ISO 19115 voor geografie versie 2.1.0</a>, verder in het document benoemd als <em>spec</em>. </p>
 <h2 id="handleiding">Handleiding</h2>
 <p>Deze handleiding beschrijft hoe een valide INSPIRE dataset metadata record aan te maken op basis van het door PDOK aangemaakte <a href="https://ngr.acceptatie.nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/C2DFBDBC-5092-11E0-BA8E-B62DE0D72085"><em>Template Nederlands metadata profiel op ISO 19115 voor geografie 2.1.0 - INSPIRE</em></a>.</p>
-<h3 id="1">1</h3>
+<h3 id="1-aanmaken-nieuw-metadata-record-op-basis-van-template">1. Aanmaken nieuw metadata record op basis van template</h3>
+<ul>
+<li>Log in op het <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/home">nationaalgeoregister.nl</a> en kies via het menu <em>Metadata beheer > Record toevoegen</em></li>
+<li>Kies dan voor <em>Dataset</em> als type document</li>
+<li>En <em>Template Nederlands metadata profiel op ISO 19115 voor geografie 2.1.0 - INSPIRE</em> als template</li>
+<li>Kies de juiste groep voor het nieuwe metadata record</li>
+<li>En klik op <em>Aanmaken</em></li>
+</ul>
+<p>Na het aanmaken van het nieuwe metadata record wordt het nieuwe record geopend in de metadata editor van het NGR.</p>
+<blockquote>
+  <p><strong>N.B.</strong> Met het aanmaken van een nieuw dataset metadata record op basis van het <em>Template Nederlands metadata profiel op ISO 19115 voor geografie 2.1.0 - INSPIRE</em> wordt automatisch al de categorie <code>Inspire</code> aan het nieuwe metadata record toegekend, zie <img src="https://user-images.githubusercontent.com/3216462/174043886-e88efc26-6848-48a0-abdd-b23aec2c9261.png" alt="image" /></p>
+</blockquote>
+<h3 id="2-invullen-velden-nieuw-metadata-record">2. Invullen velden nieuw metadata record</h3>
+<p>Deze invulinstructie gaat er vanuit dat de <em>Nederlands profiel</em> view geselecteerd is in de metadata editor:</p>
+<p><img src="https://user-images.githubusercontent.com/3216462/173834968-cbe80302-cb7c-436f-b2f1-7a96158ca5d0.png" alt="image" /></p>
+<p>En gaat van boven naar beneden door de metadata editor (in <em>Nederlands profiel</em> view) heen. </p>
+<p>Alle velden die ingevuld dienen te worden of toelichting behoeven zijn opgenomen in de invulinstructie. </p>
+<p>Velden die niet genoemd worden in de invulinstructie maar wel in de metadata editor zitten kunnen ongewijzigd worden overgenomen, net als velden waar achter vermeld staat <em>"Vaste waarde <code>$X</code>"</em>.</p>
+<p>Velden in de invulinstructie waarachter vermeld staat <em>"Voor ingevulde waarde <code>$X</code>"</em>, kunnen over het algemeen ongewijzigd worden overgenomen, maar zal in sommige gevallen toch gewijzigd moeten worden. Controleer hiervoor de documentatie waar naar gelinkt wordt. </p>
+<p>Opmaak conventie:</p>
+<ul>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/"><strong><em>Veldnaam met documentatie</em></strong></a> -  Veldnaam uit de NGR metadata editor met documentatie lemma in <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/">Nederlands metadata profiel op ISO 19115 voor geografie versie 2.1.0</a> met eventuele extra invulinstructie/documentatie. </li>
+<li><strong><em>Veldnaam zonder documentatie</em></strong>  - Veldnaam uit de NGR metadata editor, waarvoor geen documentatie lemma beschikbaar is in <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/">Nederlands metadata profiel op ISO 19115 voor geografie versie 2.1.0</a>.</li>
+<li><code>waarde</code> - Invulwaarde</li>
+<li>Headers corresponderen met de secties in de metadata editor bijvoorbeeld:</li>
+</ul>
+<figure>
+  <img
+  src="https://user-images.githubusercontent.com/3216462/174039366-d98ebe84-4738-4253-ba46-aca232ac22f8.png"
+  alt="Sectie in NGR metadata editor">
+ <figcaption><em>Sectie in NGR metadata editor</em></figcaption>
+</figure>
+<p><br/><br />
+<br/></p>
+<figure>
+  <img
+  src="https://user-images.githubusercontent.com/3216462/174039556-c37cd9f4-550d-46b8-b0c0-98016c37c422.png"
+  alt="Dezelfde sectie in deze invulinstructie">
+ <figcaption><em>Dezelfde sectie in deze invulinstructie</em></figcaption>
+</figure>
+<h4 id="21-downloads-views-en-links">2.1 Downloads, views en links</h4>
+<ol>
+<li><strong><em>Afbeelding (niet als zodanig gelabeld in metadata editor)</em></strong> - Vervang de placeholder voorbeeld weergave afbeelding met een van de dataset die beschreven wordt in dit metadata record. Aangeraden wordt vanuit PDOK om een afbeelding te kiezen met afmetingen van <code>500x500</code> pixels. Voorbeeld afbeelding kan op verschillende manieren gemaakt worden:<ul>
+<li>Vanuit de NGR metadata editor is er de mogelijkheid om een thumbnail te genereren op basis van een view service (werkte niet op moment van schrijven van deze handleiding)</li>
+<li>Gebruik de <a href="https://pdok.github.io/thumbnail-generator/">PDOK Thumbnail Generator</a></li>
+<li>Genereer een thumbnail met een desktop GIS programma</li></ul></li>
+<li><strong><em>Hyperlinks</em></strong> -  Vervang beide links naar de service accesspoints, dus voor zowel de download als de view service. In het template zijn een <strong>WMS</strong> en <strong>INSPIRE ATOM</strong> placeholder service URL voor ingevuld, maar hier kunnen ook andere service protocollen gebruikt worden. Vul de volgende velden voor de hyperlink als volgt in:<ul>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-29-url"><strong><em>URL</em></strong></a> - Service URL dat linkt naar een capabilities document (of INSPIRE Atom service feed). Bijvoorbeeld <a href="https://geodata.nationaalgeoregister.nl/rdinfo/wms?service=WMS&request=GetCapabilities"><code>https://geodata.nationaalgeoregister.nl/rdinfo/wms?service=WMS&amp;request=GetCapabilities</code></a>.</li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-30-protocol"><strong><em>Protocol</em></strong></a> - Kies juiste waarde uit de lijst</li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-31-naam"><strong><em>Naam</em></strong></a>, in het geval van INSPIRE ontsluit één service typisch één dataset; in dat geval dient hier de titel van de service ingevuld te worden.  </li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-32-omschrijving"><strong><em>Omschrijving</em></strong></a> - Vaste waarde <code>accessPoint</code></li>
+<li><strong><em>Functie</em></strong> - Vaste waarde <code>information</code>, zie ook <a href="https://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf"><em>Metadata IR</em></a> en zoek op <code>CI_OnLineFunctionCode</code></li>
+<li><strong><em>Applicatie profiel</em></strong> - Afhankelijk van het type service, zie <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">SpatialDataServiceType codelijst</a> en zie voor meer informatie de <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-32-omschrijving">spec</a></li></ul></li>
+</ol>
+<h4 id="22-identificatie">2.2 Identificatie</h4>
+<ol>
+<li><p><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-1-titel-van-de-bron"><strong><em>Titel van de bron</em></strong></a> - Titel van de dataset, indien het een INSPIRE geharmoniseerde dataset is het gebruikelijk het achtervoegsel <code>(INSPIRE geharmoniseerd)</code> te gebruiken. Klik ook op het link icoontje om een achor toe te voegen. Aangeraden wordt om naar het metadata record van de dataset te verwijzen (dit is dus het metadata record wat nu aangemaakt wordt!). Gebruik dan de volgende waarde: <code>https://nationaalgeoregister.nl/geonetwork/srv/dut/csw?SERVICE=CSW&amp;version=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;OutputSchema=http://www.isotc211.org/2005/gmd&amp;ID=${METADATA_IDENTIFIER}</code> waar <code>${METADATA_IDENTIFIER}</code> de metadata identifier is van het huidige metadata record. Deze is te zien via de XML view: <img src="https://user-images.githubusercontent.com/3216462/174069318-1973c329-d5d2-4a15-b391-b1d0253924cc.png" alt="image" /></p></li>
+<li><p><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#datum-van-de-bron"><strong><em>Datum van de bron</em></strong></a></p></li>
+</ol>
+<h5 id="221-beheer-van-de-bron">2.2.1 Beheer van de bron</h5>
+<ol>
+<li><strong><em>Herzieningsfrequentie</em></strong> - Frequentie waarmee de data herzien wordt</li>
+</ol>
+<hr />
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-4-unieke-identifier-van-de-bron"><strong><em>Unieke Identifier van de bron</em></strong></a> - Vul hier een valide UUID in, zie bijvoorbeeld <a href="https://www.uuidgenerator.net/version4">www.uuidgenerator.net</a> voor het generen van een UUID</li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-5-samenvatting"><strong><em>Samenvatting</em></strong></a></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-6-status"><strong><em>Status</em></strong></a></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-7-taal-van-de-bron"><strong><em>Taal van de bron</em></strong></a> - Vaste waarde <code>dut</code></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-8-karakterset-van-de-bron"><strong><em>Karakterset van de bron</em></strong></a> - Voor ingevulde waarde <code>utf8</code></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-9-onderwerp"><strong><em>Onderwerp</em></strong></a></li>
+</ol>
+<h5 id="222-contactgegevens-voor-de-data">2.2.2 Contactgegevens voor de data</h5>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#Verantwoordelijke-organisatie-bron"><strong>Organisatie</strong></a> - Vul de juiste organisatienaam in en vul in het veld eronder een URI naar representatief is voor de organisatie</li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-11-verantwoordelijke-organisatie-bron-e-mail"><strong><em>Email</em></strong></a></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-12-verantwoordelijke-organisatie-bron-rol"><strong><em>Rol</em></strong></a> - Vaste waarde <code>contactpunt</code></li>
+</ol>
+<hr />
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-13-trefwoord"><strong><em>GEMET - INSPIRE themes, version 1.0</em></strong></a> - Keyword uit INSPIRE <a href="https://inspire.ec.europa.eu/theme">theme register</a></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-13-trefwoord"><strong><em>Ruimtelijke dekking</em></strong></a> - Keyword uit INSPIRE <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialScope/">SpatialScope codelist</a></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-13-trefwoord"><strong><em>GEMET - Concepts, version 2.4</em></strong></a> - Optionele additionele keywords (bij voorkeur komen deze dus uit de <a href="https://www.eionet.europa.eu/gemet/en/themes/">Gemet Concepts thesaurus</a>)</li>
+</ol>
+<h4 id="23-ruimtelijke-informatie">2.3 Ruimtelijke informatie</h4>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-20-ruimtelijk-schema-van-de-bron"><strong><em>Ruimtelijk schema</em></strong></a></li>
+<li>Een van:<ul>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-21-toepassingsschaal"><strong><em>Schaal</em></strong></a></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-22-resolutie"><strong><em>Resolutie</em></strong></a></li></ul></li>
+</ol>
+<blockquote>
+  <p><strong>N.B.</strong> In het geval dat het veld <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-22-resolutie"><strong><em>Resolutie</em></strong></a> gebruikt wordt dient het veld <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-21-toepassingsschaal"><strong><em>Schaal</em></strong></a> verwijderd te worden. Verwijder deze door op het kruisje klikken naast het element. </p>
+</blockquote>
+<h5 id="231-omgrenzende-rechthoek">2.3.1 Omgrenzende rechthoek</h5>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-25-omgrenzende-rechthoek"><strong><em>Kies een regio</em></strong></a></li>
+</ol>
+<hr />
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-23-ruimtelijk-referentiesysteem"><strong><em>Ruimtelijk referentiesysteem</em></strong></a></li>
+</ol>
+<h4 id="24-gebruiks-beperkingen">2.4 Gebruiks beperkingen</h4>
+<h4 id="241-beperkingen">2.4.1 Beperkingen</h4>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-19-gebruiksbeperkingen"><strong><em>Gebruiksbeperkingen</em></strong></a> - Indien geen gebruiksbeperkingen vul dan <code>Geen gebruiksbeperkingen</code> in.</li>
+</ol>
+<h4 id="25-juridische-toegangs-beperkingen">2.5 Juridische toegangs beperkingen</h4>
+<p>Zie <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-17-juridische-toegangsrestricties">spec</a> voor uitleg. Template is voor ingevuld op basis van <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#example-5-xml-notatie-open-data-licentie-met-inspire"><em>Voorbeeld 5</em></a> uit de spec. </p>
+<h5 id="251-juridische-toegangs-beperkingen">2.5.1 Juridische toegangs beperkingen</h5>
+<p>Vaste waarde, indien gebruik wordt gemaakt van <a href="https://creativecommons.org/publicdomain/mark/1.0/deed.nl">https://creativecommons.org/publicdomain/mark/1.0/deed.nl</a> licentie.</p>
+<h5 id="252-juridische-toegangsbeperkingen">2.5.2 Juridische toegangsbeperkingen</h5>
+<p>Vaste waarde, indien gebruik wordt gemaakt van <a href="https://creativecommons.org/publicdomain/mark/1.0/deed.nl">https://creativecommons.org/publicdomain/mark/1.0/deed.nl</a> licentie.</p>
+<h4 id="26-distributie">2.6 Distributie</h4>
+<h5 id="261-distributie-formaat">2.6.1 Distributie formaat</h5>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-26-naam-distributie-formaat"><strong><em>Naam distributie formaat</em></strong></a><ul>
+<li><strong><em>Text veld</em></strong> - Format <code>$THEMA_NAAM GML Application Schema</code>, bijvoorbeeld: <code>Protected Sites - GML Application Schema</code> </li>
+<li><strong><em>URL Verwijzing</em></strong> - URL naar XSD van INSPIRE thema bijvoorbeeld:  <code>https://inspire.ec.europa.eu/schemas/ps/4.0/ProtectedSites.xsd</code></li></ul></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-27-versie-distributie-formaat"><strong><em>Versie distributie formaat</em></strong></a> - Voor ingevulde waarde:  <code>versie 4.0; GML, versie 3.2.1</code> (afhankelijk van versie XSD thema en GML)</li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-28-specificatie-distributie-formaat"><strong><em>Specificatie distributie formaat</em></strong></a><ul>
+<li><strong><em>Text veld</em></strong> - Format <code>Data specificatie $THEMA_NAAM_NL</code>, bijvoorbeeld: <code>Data specificatie Beschermde gebieden</code> </li>
+<li><strong><em>URL Verwijzing</em></strong> - URL INSPIRE technical guidance van thema, bijvoorbeeld: <code>http://inspire.ec.europa.eu/id/document/tg/ps</code></li></ul></li>
+</ol>
+<h4 id="27-data-kwaliteit">2.7 Data kwaliteit</h4>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-33-niveau-kwaliteitsbeschrijving"><strong><em>Niveau kwaliteits beschrijving</em></strong></a> - Vaste waarde <code>dataset</code></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-34-algemene-beschrijving-herkomst"><strong><em>Algemene beschrijving herkomst</em></strong></a></li>
+</ol>
+<h5 id="271-domein-consistentie--conformiteit-indicatie-met-de-specificatie-1">2.7.1 Domein consistentie / Conformiteit indicatie met de specificatie 1</h5>
+<p>Vooringevuld, zie <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-35-specificatie">spec</a>. Is indicatie dat de dataset en bijbehorende services voldoen aan de INSPIRE richtlijnen, indien de checkbox <strong><em>Conformiteit indicatie met de specificatie</em></strong> is aangevinkt. Indien niet volledige voldaan wordt aan de INSPIRE richtlijnen kan in het veld <a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-38-verklaring"><em><strong>Verklaring</strong></em></a> worden aangeven waarom niet wordt voldaan aan de richtlijnen. </p>
+<h5 id="272-domein-consistentie--conformiteit-indicatie-met-de-specificatie-2">2.7.2 Domein consistentie / Conformiteit indicatie met de specificatie 2</h5>
+<p>Tweede <strong><em>Conformiteit indicatie met de specificatie</em></strong> element is om aan te geven dat dataset voldoet aan de datamodel behorend bij het INSPIRE data thema.</p>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-35-specificatie"><strong><em>Titel</em></strong></a><ul>
+<li><strong><em>URL verwijzing</em></strong> - URL naar pagina waar technical guidance voor data thema te downloaden is, bijvoorbeeld: <code>https://inspire.ec.europa.eu/id/document/tg/au</code></li></ul></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-35-specificatie"><strong><em>Specificatie datum</em></strong></a> - Laat type datum op <code>publicatie</code> staan en vul de publicatie datum van de Technical Guidance van het betreffende INSPIRE data thema</li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-38-verklaring"><strong><em>Verklaring</em></strong></a> - Vul waarde in <code>Dataset voldoet aan specificatie</code> indien deze voldoen aan de specificatie, indien deze niet voldoet kan hier een reden worden opgegeven waarom niet wordt voldaan aan de specificatie. </li>
+</ol>
+<h4 id="28-over-de-metadata">2.8 Over de metadata</h4>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-44-taal-van-de-metadata"><strong><em>Taal van de metadata</em></strong></a> - Vaste waarde <code>dut</code></li>
+<li><strong><em>Metadata karakterset</em></strong> -  Vaste waarde <code>utf8</code> </li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-46-hierarchieniveau"><strong><em>Hiërarchisch niveau</em></strong></a> - Vaste waarde <code>dataset</code></li>
+</ol>
+<h5 id="281-contact-gegevens-voor-de-metadata">2.8.1 Contact gegevens voor de metadata</h5>
+<ol>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-48-verantwoordelijke-organisatie-metadata"><strong>Organisatie</strong></a> - Vul de juiste organisatienaam in en vul in het veld eronder een URI naar representatief is voor de organisatie</li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#metadata-elementen-uitwerking"><strong><em>Email</em></strong></a></li>
+<li><a href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#x5-2-49-verantwoordelijke-organisatie-metadata-rol"><strong><em>Rol</em></strong></a> - Vaste waarde <code>contactpunt</code></li>
+</ol>
+<p>Nadat alle velden zijn ingevuld </p>
+<h3 id="3-valideren-met-inspire-etf-validator">3. Valideren met INSPIRE ETF validator</h3>
+<ol>
+<li>Navigeer met de browser naar de <a href="https://inspire.ec.europa.eu/validator/home/index.html">INSPIRE Reference Validator</a></li>
+<li>Klik op <em>Test your data, services or metadata</em></li>
+<li>Selecteer bij <em>Select the INSPIRE resource you would like to test</em> de waarde <code>Metadata</code></li>
+<li>Selecteer bij <em>Select the Technical Guidelines version</em> de waarde <code>Version 2.0</code></li>
+<li>Selecteerd bij <em>Select the type of metadata record(s) to be tested</em> de waarde <code>Data sets and data set series</code></li>
+<li>Vul de antispam filter in</li>
+<li>Geef een referentie naar het zojuist aangemaakt metadata record op:</li>
+</ol>
+<ul>
+<li>een url naar het XML document van de metadata, dus bijvoorbeeld: <code>https://ngr.acceptatie.nationaalgeoregister.nl/geonetwork/srv/dut/csw?SERVICE=CSW&amp;version=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;OutputSchema=http://www.isotc211.org/2005/gmd&amp;ID=60a2a7c2-d5b3-4ad5-b562-c448695357fb</code></li>
+<li>download het XML metadata document vanuit het NGR en upload het bestand in het formulier (bijvoorbeeld in het geval het metadata record nog niet gepubliceerd is)</li>
+</ul>
+<ol>
+<li>Bij een geslaagde validatie wordt het volgende scherm getoond (<code>PASSED_MANUAL</code> geeft aan dat de validatie geslaagd is, maar dat een aantal zaken nog handmatig gecontroleerd moeten worden):</li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/3216462/174074851-c700bfdf-72c4-406e-bca1-f4243a95cdbc.png" alt="image" /></p>
+<hr />
+<blockquote>
+  <p><strong>N.B.</strong> Onderstaande <code>CSS</code> is nodig voor styling van de gh-pages page.</p>
+</blockquote>
+<style>
+a strong em{
+    color: #0366d6
+}
+</style>
 
         </div>
         <style type='text/css'>body {
