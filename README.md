@@ -219,7 +219,9 @@ Nadat alle velden zijn ingevuld
 
 ---
 
-> **N.B.** Onderstaande `CSS` is nodig voor styling van de gh-pages page.
+<!--
+**N.B.** Onderstaande `CSS` is nodig voor styling van de gh-pages page. 
+-->
 
 <style>
 a strong em{
