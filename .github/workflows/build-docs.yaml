@@ -33,12 +33,12 @@ jobs:
 
       - name: Copy manual to gh-pages folder
         run: |
-          mv README.html gh-pages/index.html
-
+          mkdir -p /tmp/gh-pages
+          mv README.html /tmp/gh-pages/index.html
       - name: Publish to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./gh-pages
+          publish_dir: /tmp/gh-pages
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
